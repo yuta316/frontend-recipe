@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mordal.css"></link>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <button class="button" @click.self = "changeModal">Modal Open</button>
+        <div class="modal">
+            <div class="modal-overlay" @click="changeModal" v-if="isModal">
+                <div class="modal-container" @click.stop>
+                    <i class="far fa-times-circle"></i>
+                    <h2 class="modal-container-title">modal window</h2>
+                    <div class="modal-container-content">
+                        <p>modal window is opend :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data(){
+                return {
+                    isModal: false,
+                }
+            },
+            methods: {
+                changeModal(){
+                    this.isModal = ! this.isModal
+                }
+            },
+
+        })
+    </script>
+</body>
+
+</html>
