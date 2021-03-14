@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dropdown.css"></link>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="app">
+      <nav class="navbar">
+          <a href="#" class="navbar-logo">LOGO</a>
+          <ul class="navbar-menu">
+              <li class="navbar-menu-item" v-for="menu in menus" :key="menu.name" @mouseenter="changeMenu(menu.name)" @mouseleave="changeMenu('')">
+                  <p>{{ menu.name }} </p>
+                  <div class="navbar-submenu-wrapper" v-if="menu.name === nowMenu">
+                      <ul class="navbar-submenu">
+                          <li class="navbar-submenu-item" v-for="(menu,i) in menu.submenu" :key="i">
+                              <p>{{menu}}</p>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+      </nav>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data(){
+                return {
+                    nowMenu: '',
+                    menus: [
+                        {
+                            name: "Menu1",
+                            submenu: ["submenu 1-1","submenu 1-2"]
+                        },
+                        {
+                            name: "Menu2",
+                            submenu: ["submenu 2-1","submenu 2-2","submenu 2-3","submenu 2-4"]
+                        },
+                        {
+                            name: "Menu3",
+                            submenu: ["submenu 3-1","submenu 3-2"]
+                        },
+                    ]
+                }
+            },
+            methods: {
+               changeMenu(menu) {
+                    this.nowMenu = menu
+               }
+            },
+
+        })
+    </script>
+</body>
+
+</html>
