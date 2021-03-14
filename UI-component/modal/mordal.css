@@ -1,0 +1,67 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.modal-overlay {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  pointer-events: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+.modal-container {
+  background-color: #fff;
+  border-radius: 6px;
+  min-width: 300px;
+  max-height: 90vh;
+  padding: 1.5rem;
+  -webkit-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  width: 90%;
+  pointer-events: none;
+}
+
+.modal-container-title {
+  border-bottom: 1px solid #dedede;
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  transform: translateY(0);
+}
+
+.button {
+  background-color: #c0e7e9;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 0.76rem 1rem;
+}
+/*# sourceMappingURL=mordal.css.map */
