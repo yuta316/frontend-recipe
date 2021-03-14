@@ -1,0 +1,35 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.tab-list {
+  border-bottom: 1px solid #dedede;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0;
+}
+
+.tab-item {
+  border: 1px solid transparent;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  cursor: pointer;
+  margin-bottom: -1px;
+  margin-left: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.tab-isopen {
+  border-color: #dedede;
+  border-bottom-color: #fff;
+  color: #fc5185;
+}
+/*# sourceMappingURL=tab.css.map */
